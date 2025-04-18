@@ -1,0 +1,58 @@
+Read and complete Part 1 and Part 2 tasks. Respond with a combined JSON object of key-value pairs from both parts. Do not return anything except the JSON object of key-value pairs as output. Do not wrap the JSON codes in JSON markers.
+
+Part 1: The following is the title of the news article. Read it and perform the task that follows. 
+
+Title: {insertTitle}
+
+Task: Detemine the sentiment and objectivity of this news article title and determine if there is any bias. If it is a politically related, what side of the political spectrum does this title support? Supporting a particular side mean supporting its viewpoints, politicians, or policies. Provide reasoning for all your answers.  
+
+1. Instruction: Give a short paragraph summarising in what ways the article title is biased or unbiased.
+    Key: "titleObjectivityReason"
+    Value: A short paragraph of text.
+
+2. Instruction: Give a value from 0 and 1, with 1 indicating the article is not objective at all (biased) and 0 indicating the article is objective (unbiased). 
+    Key: "titleObjectivityValue"
+    Value: A value from 0 to 1.
+
+3. Instruction: Give a value from -1 and 1, with 1 indicating the title has a very positive sentiment and -1 indicating a very negative sentiment. A value of 0 indicates a neutral sentiment.
+    Key: "titlePolarityValue"
+    Value: A value from -1 to 1.
+
+4. Instruction: If the title is politically related, give a short paragraph in what ways the titlearticle leans towards a particular side in the political spectrum. If it is not politically related, give an empty string.
+    Key: "titleLean"
+    Value: A short paragraph of text.
+
+5. Instruction: If the article is politically related, give a value from -2 to 2, with 2 indicating strong right-wing support and -2 indicating strong left-wing support. A value of 0 indicates a neutral stance. If it is not politically related, give an empty string.
+    Key: "titleLeanValue"
+    Value: A value from -2 to 2.
+
+
+Part 2: The following is the content of the news article. Read it and perform the task that follows.
+
+Sub title: {insertSubTitle}
+
+Content: {insertContent}
+
+Captions: {insertCaptions}
+
+Task: Detemine the sentiment and objectivity of this news article and determine if there is any bias. If it is a politically related, what side of the political spectrum does this article support? Supporting a particular side mean supporting its viewpoints, politicians, or policies. Provide reasoning for all your answers. 
+
+1. Instruction: Give a short paragraph summarising in what ways the article is biased or unbiased.
+    Key: "bodyObjectivityReason"
+    Value: A short paragraph of text.
+
+2. Instruction: Give a value from 0 and 1, with 1 indicating the article is not objective at all (biased) and 0 indicating the article is objective (unbiased). 
+    Key: "bodyObjectivityValue"
+    Value: A value from 0 to 1.
+
+3. Instruction: Give a value from -1 and 1, with 1 indicating the article has a very positive sentiment and -1 indicating a very negative sentiment. A value of 0 indicates a neutral sentiment.
+    Key: "bodyPolarityValue"
+    Value: A value from -1 to 1.
+
+4. Instruction: If the article is politically related, give a short paragraph in what ways the article leans towards a particular side in the political spectrum. If it is not politically related, give an empty string.
+    Key: "bodyLean"
+    Value: A short paragraph of text.
+
+5. Instruction: If the article is politically related, give a value from -2 to 2, with 2 indicating strong right-wing support and -2 indicating strong left-wing support. A value of 0 indicates a neutral stance. If it is not politically related, give an empty string.
+    Key: "bodyLeanValue"
+    Value: A value from -2 to 2.
